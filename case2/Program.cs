@@ -13,8 +13,7 @@ int InputNum(string message)
 int NumOfDigits(int num)
 {
     int i;
-    for (i = 0; num != 0; i++)
-        num /= 10;
+    for (i = 0; num != 0; i++, num /= 10);
     return i;
 }
 
