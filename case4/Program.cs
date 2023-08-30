@@ -9,7 +9,7 @@ int InputNum(string message)
     return int.Parse(Console.ReadLine()!); 
 }
 
-int[] ArrayOfNumbers(int size)
+/* int[] ArrayOfNumbers(int size)
 {
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
@@ -29,4 +29,30 @@ void PrintArray(int[] array)
 
 int size = InputNum("Введите размер массива: ");
 int[] result = ArrayOfNumbers(size);
-PrintArray(result);
+PrintArray(result); */
+
+int[] CreateArray(int size)
+{
+    return new int[size];
+}
+
+void FillArray(int[] ints)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < ints.Length; i++)
+        ints[i] = rnd.Next(2);
+}
+
+string PrintArray(int[] ints)
+{
+    string res = ""; // res = String.Empty;
+    for (int i = 0; i < ints.Length; i++)
+        res += $"{ints[i]} ";
+    return res;
+}
+
+int size = InputNum("Введите размер массива: ");
+int[] myArray = CreateArray(size);
+FillArray(myArray);
+string answer = PrintArray(myArray);
+Console.WriteLine(answer);
