@@ -1,1 +1,12 @@
-﻿
+﻿int[] array1 = {1, 2, 3, 4, 5};
+int[] array2 = array1;
+Console.WriteLine(String.Join(" ", array1));
+Console.WriteLine(String.Join(" ", array2));
+Console.WriteLine("______________________");
+array1[2] = 10;
+Console.WriteLine(String.Join(" ", array1));
+Console.WriteLine(String.Join(" ", array2));
+Console.WriteLine("______________________");
+array2[4] = 15;
+Console.WriteLine(String.Join(" ", array1));
+Console.WriteLine(String.Join(" ", array2));
