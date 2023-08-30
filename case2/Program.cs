@@ -4,3 +4,20 @@
 78 -> 2
 89126 -> 5 */
 
+int InputNum(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine()!); 
+}
+
+int NumOfDigits(int num)
+{
+    int i;
+    for (i = 0; num != 0; i++)
+        num /= 10;
+    return i;
+}
+
+int number = InputNum("Введите число: ");
+int amount = NumOfDigits(number);
+Console.WriteLine($"В вашем числе {amount} цифр");
