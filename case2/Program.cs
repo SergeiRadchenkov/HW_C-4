@@ -12,9 +12,12 @@ int InputNum(string message)
 
 int NumOfDigits(int num)
 {
-    int i;
-    for (i = 0; num != 0; i++, num /= 10);
-    return i;
+    // int i;
+    // for (i = 0; num != 0; i++, num /= 10);
+
+    int digitCount = (int)Math.Log10(num) +1;
+    // return i;
+    return digitCount;
 }
 
 int number = InputNum("Введите число: ");
